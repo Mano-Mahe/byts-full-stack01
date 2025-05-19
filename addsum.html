@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body input{
+        margin-bottom:0px;
+        height: 60px;
+        width: 60px;
+        border-radius:10px;
+        font-size: large;
+        font-weight: bold;
+        background-color: rgb(236, 209, 141);
+        border-color: whitesmoke;
+        color: whitesmoke;
+    }
+    body label{
+        font-size: 26px;
+        color: rgb(14, 13, 13);
+    }
+    body{
+        background-image: url(https://cdn3.vectorstock.com/i/1000x1000/56/02/auditor-at-the-consideration-of-report-vector-21805602.jpg);
+        text-align: center;
+        margin-top: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .a{
+        text-align: center;
+        height: 30px;
+        width: 80px;
+        background-color: beige;
+        border-radius: 15px;
+        margin-left: 25px;
+        box-shadow: 0px 0px 0px 2px;
+        transition: 1s;
+        cursor: pointer;
+        
+    }
+    #result{
+        margin-left: 280px;
+        height: 60px;
+        width: 300px;
+        border-radius: 30px;
+         background-color: rgb(233, 210, 152);
+        border-color: whitesmoke;
+        color: whitesmoke;
+        transition: 1s;
+        
+    }
+    .k{
+        margin-bottom: 50px;
+    }
+    button:hover{
+        background-color: rgb(235, 217, 156);
+        color: whitesmoke;
+    }
+    #result:hover{
+        background-color: green;
+        color:whitesmoke
+    }
+    .home{
+        text-decoration: none;
+        background-color: beige;
+        margin-left: 25px;
+        font-size: large;
+        transition: 1s;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div id="e">
+    <label for="number" id="b" >Value of A</label>
+    <input type="number"name="Value of A" id="one" class="k">
+    <br/>
+     <button id="result" class="k">result</button>
+     <br/>
+      <label for="number">Value of B</label>
+    <input type="number"name="Value of B" id="two" class="k">
+    <br/>
+    <div id="g">
+    <button onclick="fn1()" class="a">add</button>
+    <button onclick="fn2()" class="a">sub</button>
+    <button onclick="fn3()" class="a">mul</button>
+    <button onclick="fn4()" class="a">div</button>
+    </br>
+    </br>
+     <a href="./project.html" class="home">back</a>
+    </div>
+    <br/>
+   </div>
+
+    <script>
+        function fn1() {
+        let a=parseInt(document.getElementById('one').value);
+        let b=parseInt(document.getElementById('two').value);
+        let sum=a+b;
+        document.getElementById('result').innerText=sum;
+        }
+    </script>
+     <script>
+        function fn2() {
+        let a=parseInt(document.getElementById('one').value);
+        let b=parseInt(document.getElementById('two').value);
+        let sum=a-b;
+        document.getElementById('result').innerText=sum;
+        }
+    </script>
+     <script>
+        function fn3() {
+        let a=parseInt(document.getElementById('one').value);
+        let b=parseInt(document.getElementById('two').value);
+        let sum=a*b;
+        document.getElementById('result').innerText=sum;
+        }
+    </script>
+     <script>
+        function fn4() {
+        let a=parseInt(document.getElementById('one').value);
+        let b=parseInt(document.getElementById('two').value);
+        let sum=a/b;
+        document.getElementById('result').innerText=sum;
+        }
+    </script>
+</body>
+</html>

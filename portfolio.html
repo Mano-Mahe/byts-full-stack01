@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mano M | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #38062b url('') no-repeat center center fixed;
+      background-size: cover;
+      color: #f8f0ff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background 0.5s ease;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(26, 0, 26, 0.9);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(138, 43, 226, 0.3);
+    }
+
+    nav h1 {
+      color: #c77dff;
+      font-size: 1.8rem;
+      text-shadow: 0 0 5px #9b5de5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #c77dff;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+      margin-bottom: 3rem;
+      background-color: rgba(51, 0, 102, 0.3);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(199, 125, 255, 0.3);
+      transition: transform 0.3s ease, background 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    section:hover {
+      transform: scale(1.02);
+      background-color: rgba(102, 0, 204, 0.3);
+    }
+
+    h2 {
+      color: #e0aaff;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      border-left: 4px solid #c77dff;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+
+    a {
+      color: #dabfff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #e0aaff;
+    }
+
+    .resume {
+      background-color: #c77dff;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      box-shadow: 0 0 10px #e0aaff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      padding-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #9b5de5;
+      color: #fff;
+      padding: 0.2rem 0.7rem;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+      animation: pulse 2s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1>Mano M<span class="badge">Portfolio</span></h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I'm <strong>Mano M</strong>, a final year student in <strong>Computer Science and Design</strong> at <strong>Karpagam Academy of Higher Education</strong>. I'm passionate about building software, solving problems, and creating user-friendly web applications. I have a CGPA of 8.4 up to the fifth semester and a strong foundation in coding and design thinking.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Flight Ticket Booking System (C++)</li>
+        <li>Expense Tracker (C++)</li>
+        <li>Quiz Application (JavaScript)</li>
+        <li>Two Sum Calculator (JavaScript)</li>
+        <li>Temperature Converter (JavaScript)</li>
+        <li>Timer Web App (JavaScript)</li>
+        <li>Smart Emotion-Based Music & Mood Assistant (Full Stack)</li>
+      </ul>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <a href="./Mano Resume.45 (1).pdf" class="resume">Download My Resume</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> 8610155725</p>
+      <p><strong>Email:</strong> <a href="mailto:manomahe2005@gmail.com">manomahe2005@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="#">Your LinkedIn Profile</a></p>
+      <p><strong>GitHub:</strong> <a href="#">Your GitHub</a></p>
+      <p><strong>LeetCode:</strong> <a href="#">Your LeetCode Profile</a></p>
+      <p><strong>GeeksforGeeks:</strong> <a href="#">Your GFG Profile</a></p>
+      <p><strong>CodeChef:</strong> <a href="#">Your CodeChef Profile</a></p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Mano M.
+  </footer>
+</body>
+
+</html>

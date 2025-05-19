@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin-top: 200px;
+        background-image: url(https://media.altreeq.com/img/22/08/19/325919.jpg);
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    body input{
+        height: 30px;
+        width: 180px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 1px 0px;
+        transition: 1s;
+    }
+    label{
+        font-size: 23px;
+        font-weight: 700;
+    }
+    input:hover{
+        background-color: black;
+        color: whitesmoke;
+        font-weight: 800;
+    }
+    #output{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    button{
+        font-size: 17px;
+        height: 30px;
+        width: 100px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    button:hover{
+        background-color: black;
+        color: whitesmoke;
+        font-weight: bolder;
+        border-color: whitesmoke;
+    }
+</style>
+<body>
+    <label for="fahrenheit" id="">Fahrenheit : </label>
+    <input type="number" id="A">
+    <br>
+    <p id="output">Celsius : </p>
+    <br>
+    <button onclick="convert()">Convert</button>
+    <script>
+        function convert(){
+        var a=parseFloat(document.getElementById("A").value);
+        var b=((a-32)*(5/9));
+        document.getElementById("output").innerText=`Celsius : ${b}`;
+        }
+    </script>
+
+</body>
+</html>

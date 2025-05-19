@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .buttons{
+            font-size: 18px;
+            font-style: italic;
+            padding: 50px;
+            border:none;
+            border-radius: 5PX;
+            cursor: pointer;
+            transition: backround-color 0.2s;
+            border-color: rgb(67, 5, 212);
+            background-color: 369rgb(186, 227, 105);
+        }
+        .buttons {
+  display: grid;
+  grid-template-columns: repeat(20, 10fr);
+  gap: 10px;
+    </style>
+    <style>
+        }
+        .img-div {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .img-div img {
+      width: 250px;
+      height: auto;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background-color: white;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .img-div img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+    body{
+      background-image: url(https://img.freepik.com/premium-photo/modern-calculator-stationery-color-surface_392895-1209.jpg?w=2000);
+    }
+    </style>
+    <center>
+    <div class="calculator">
+    <div class="buttons">
+        <h2>CALCULATOR</h2>
+         <input type="text" id="display" disabled />
+         <br/>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('4')">4</button>
+          <br/>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <br/>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('0')">0</button>
+     <button onclick="appendToDisplay('+')">+ </button>
+      <button onclick="appendToDisplay('-')">- </button>
+
+         <br/>
+      <button onclick="appendToDisplay('*')">* </button>
+      <button onclick="appendToDisplay('/')">/ </button>
+      <button onclick="deletelast()">X</button>
+      <button onclick="equal('=')">= </button>
+      <button onclick="clearDisplay('c')">c </button>
+      </center>
+      <div class="img-div">
+    </div>
+      <script>
+        function appendToDisplay(cal){
+            document.getElementById('display').value+=cal
+        }
+        function deletelast(){
+            let val=document.getElementById('display');
+            val.value=val.value.slice(0,-1);
+        }
+        function clearDisplay(){
+
+            document.getElementById('display').value=' ';
+        }
+        function equal(){
+            let l=document.getElementById('display');
+            try{
+                l.value=eval(l.value);
+                }catch(ex){
+                    l.value='ERROR';
+                }
+            }
+      </script>
+</body>
+</html>
+
+   

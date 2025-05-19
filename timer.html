@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin-top: 190px;
+        text-align: center;
+        background-image: url(https://i.pinimg.com/originals/b3/b1/ac/b3b1acfe66b18d45dcf39d2ca26030c0.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .o{
+        margin-left: 30px;
+        height: 50px;
+        width: 140px;
+        border-radius: 20px;
+        transition: 1s;
+    }
+    h1{
+        font-size: 60px;
+        color: rgb(8, 59, 62);
+        font-weight: 900;
+
+    }
+    button:hover{
+        background-color:  rgb(8, 59, 62);
+        color: whitesmoke;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+</style>
+<body>
+    <button onclick="fn1()" class="o">start</button>
+    <button onclick="fn2()" class="o">stop</button>
+    <button onclick="fn3()" class="o">reset</button>
+    <h1 id="result">start</h1>
+    <script>
+        var i=0;
+        var t=0;
+    function fn1(){
+        t=setInterval(()=>{
+        document.getElementById('result').innerText=i;
+        i++;
+        },1000);
+    }
+    function fn2(){
+        clearInterval(t);
+    }
+    function fn3(){
+        i=0;
+        document.getElementById('result').innerText=i;
+        clearInterval(t);
+    }
+    </script>
+</body>
+</html>
